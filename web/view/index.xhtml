@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<f:view>
+    <head>
+        <style type="text/css">
+            a:link, a:visited {
+                background-color: black;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 110%;
+                <!--font-family: "Courier New";-->
+            }
+
+
+            a:hover, a:active {
+                background-color: red;
+            }
+
+            body, textarea{
+
+                font-family: "Segoe UI Light";
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+    <br></br>
+
+
+    <h:link value="General Information" outcome="index.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Faculty" outcome="uni_faculty.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Department" outcome="uni_dept.xhtml"></h:link>
+
+    &nbsp;
+    <h:link value="Test" outcome="test.xhtml"/>
+    <hr></hr>
+
+
+<h:form>
+
+    <h:outputLabel for="fullName">
+        <h:outputText value="University Full Name: "></h:outputText>
+        <h:inputText id="fullName"
+                     value="#{universityOfficialInfoController.university_officialInfo.fullName}"></h:inputText>
+    </h:outputLabel>
+<br></br>
+<br></br>
+
+    <h:outputLabel for="shortName">
+        <h:outputText value="University Short Name: "></h:outputText>
+        <h:inputText id="shortName"
+                     value="#{universityOfficialInfoController.university_officialInfo.shortName}"></h:inputText>
+    </h:outputLabel>
+    <br></br>
+    <br></br>
+
+    University Type:
+    <h:selectOneMenu value="#{universityOfficialInfoController.university_officialInfo.type}">
+    <f:selectItem itemValue="PUBLIC" itemLabel="Public" />
+    <f:selectItem itemValue="PRIVATE" itemLabel="Private" />
+</h:selectOneMenu>
+
+    <br></br>
+    <br></br>
+    University Category
+    <h:selectOneMenu value="#{universityOfficialInfoController.university_officialInfo.category}">
+        <f:selectItem itemValue="AGRICULTURAL" itemLabel="Agricultural" />
+        <f:selectItem itemValue="ENGINEERING" itemLabel="Engineering" />
+        <f:selectItem itemValue="GENERAL" itemLabel="General" />
+        <f:selectItem itemValue="SCIENCE AND TECHNOLOGY" itemLabel="Science and Technology" />
+        <f:selectItem itemValue="TEXTILE" itemLabel="Textile" />
+    </h:selectOneMenu>
+    <br></br>
+    <br></br>
+
+    University Established Date:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.establishedDate}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Location:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.location}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Division
+    <h:selectOneMenu value="#{universityOfficialInfoController.university_officialInfo.division}">
+        <f:selectItem itemValue="BARISHAL" itemLabel="Barishal" />
+        <f:selectItem itemValue="CHOTTOGRAM" itemLabel="Chottogram" />
+        <f:selectItem itemValue="DHAKA" itemLabel="Dhaka" />
+        <f:selectItem itemValue="KHULNA" itemLabel="Khulna" />
+        <f:selectItem itemValue="MYMENSINGH" itemLabel="Mymensingh" />
+        <f:selectItem itemValue="RAJSHAHI" itemLabel="Rajshahi" />
+        <f:selectItem itemValue="RANGPUR" itemLabel="Rangpur" />
+        <f:selectItem itemValue="SYLHET" itemLabel="Sylhet" />
+    </h:selectOneMenu>
+    <br></br>
+    <br></br>
+
+    University Motto:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.motto}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Chancellor:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.chancellor}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Vice Chancellor:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.VC}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Campus Area:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.campus}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Register:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.register}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    University Website:
+    <h:inputText value="#{universityOfficialInfoController.university_officialInfo.website}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    <h:commandButton value="Add University" action="#{universityOfficialInfoController.UniversityOfficialInfo}"></h:commandButton>
+
+</h:form>
+    </body>
+</f:view>
+</html>

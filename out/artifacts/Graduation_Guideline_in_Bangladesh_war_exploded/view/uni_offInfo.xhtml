@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+
+    <head>
+        <style type="text/css">
+            a:link, a:visited {
+                background-color: black;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 110%;
+                font-family: "Courier New";
+            }
+
+
+            a:hover, a:active {
+                background-color: red;
+            }
+
+            body, textarea{
+
+                font-family: "Segoe UI Light";
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <h2 align="center"> University Official Information </h2>
+    <br></br>
+    <br></br>
+
+    <hr></hr>
+    <p>
+        University Full Name: #{universityOfficialInfoController.university_officialInfo.fullName}
+        <br></br>
+        University Short Name: #{universityOfficialInfoController.university_officialInfo.shortName}
+        <br></br>
+        University Type: #{universityOfficialInfoController.university_officialInfo.type}
+        <br></br>
+        University Category: #{universityOfficialInfoController.university_officialInfo.category}
+        <br></br>
+        University Established Date: #{universityOfficialInfoController.university_officialInfo.establishedDate}
+        <br></br>
+        University Location: #{universityOfficialInfoController.university_officialInfo.location}
+        <br></br>
+        University Division: #{universityOfficialInfoController.university_officialInfo.division}
+        <br></br>
+        University Motto: #{universityOfficialInfoController.university_officialInfo.motto}
+        <br></br>
+        University Chancellor: #{universityOfficialInfoController.university_officialInfo.chancellor}
+        <br></br>
+        University Vice Chancellor: #{universityOfficialInfoController.university_officialInfo.VC}
+        <br></br>
+        University Campus: #{universityOfficialInfoController.university_officialInfo.campus}
+        <br></br>
+        University Register: #{universityOfficialInfoController.university_officialInfo.register}
+        <br></br>
+        University Website: #{universityOfficialInfoController.university_officialInfo.website}
+        <br></br>
+    </p>
+    <hr></hr>
+    <br></br>
+    <br></br>
+
+
+
+    <h:link value="Back" outcome="index.xhtml"></h:link>
+
+    </body>
+
+</f:view>
+</html>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <head>
+        <style type="text/css">
+            a:link, a:visited {
+                background-color: black;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 110%;
+            <!--font-family: "Courier New";-->
+            }
+
+
+            a:hover, a:active {
+                background-color: red;
+            }
+
+            body, textarea{
+
+                font-family: "Segoe UI Light";
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <br></br>
+
+
+    <h:link value="General Information" outcome="index.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Faculty" outcome="uni_faculty.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Department" outcome="uni_dept.xhtml"></h:link>
+    <hr></hr>
+
+    <h1 align="center"> University Department Insertion </h1>
+
+
+    <h:form>
+
+        <hr></hr>
+        <br></br>
+        Select University:
+        <h:selectOneMenu
+                id="varsity"
+                value="#{uniDeptController.uniDept.universityList}">
+            <f:selectItem itemLabel="--Select University--" itemValue="" noSelectionOption="true" />
+            <f:selectItems value="#{uniDeptController.getUniversity()}"></f:selectItems>
+            <p:ajax listener="#{uniDeptController.uniDept.uniID}"
+                    update="faculty" />
+        </h:selectOneMenu>
+
+        <br></br>
+        <br></br>
+
+        Select Faculty:
+        <h:selectOneMenu
+                id="faculty"
+                value="#{uniDeptController.uniDept.facultyList}"  >
+            <f:selectItem itemLabel="--Select Faculty--" itemValue="" noSelectionOption="true" />
+            <f:selectItems value="#{uniDeptController.getFaculty()}"></f:selectItems>
+        </h:selectOneMenu>
+
+
+        <br></br>
+        <br></br>
+
+        Department Name:
+        <h:inputText value="#{uniDeptController.uniDept.dept_name}"></h:inputText>
+        <br></br>
+        <br></br>
+
+        Head of Department:
+        <h:inputText value="#{uniDeptController.uniDept.dept_head}"></h:inputText>
+        <br></br>
+        <br></br>
+
+        Offered Degree:
+        <h:inputText value="#{uniDeptController.uniDept.degree}"></h:inputText>
+        <br></br>
+        <br></br>
+
+
+        Course Duration:
+        <h:selectOneMenu value="#{uniDeptController.uniDept.duration}">
+            <f:selectItem itemValue="4" itemLabel="4"></f:selectItem>
+            <f:selectItem itemValue="5" itemLabel="5"></f:selectItem>
+        </h:selectOneMenu>
+        years
+        <br></br>
+        <br></br>
+
+
+        Semester:
+        <h:selectOneRadio value="#{uniDeptController.uniDept.semester}">
+            <f:selectItem itemValue="8" itemLabel="8"></f:selectItem>
+            <f:selectItem itemValue="12" itemLabel="12"></f:selectItem>
+        </h:selectOneRadio>
+        <br></br>
+        <br></br>
+
+        Expenditure:
+        <h:inputText value="#{uniDeptController.uniDept.cost}"></h:inputText>
+        BDT
+        <br></br>
+        <br></br>
+
+
+        Contact:
+        <h:inputText value="#{uniDeptController.uniDept.contact}"></h:inputText>
+        <br></br>
+        <br></br>
+
+
+        <h:commandButton value="Create Department"
+                         action="#{uniDeptController.UniversityDept}">
+        </h:commandButton>
+
+        <br></br>
+        <br></br>
+
+
+    </h:form>
+
+    <hr></hr>
+    </body>
+</f:view>
+</html>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <from-view-id>/view/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{universityOfficialInfoController.UniversityOfficialInfo}</from-action>
+            <from-outcome>Okay</from-outcome>
+            <to-view-id>/view/uni_offInfo.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/view/uni_faculty.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{universityFacultyController.UniversityFaculty}</from-action>
+            <from-outcome>faculty</from-outcome>
+            <to-view-id>/view/uni_faculty_insert.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/view/uni_dept.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{uniDeptController.UniversityDept}</from-action>
+            <from-outcome>department</from-outcome>
+            <to-view-id>/view/uni_dept_insert.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

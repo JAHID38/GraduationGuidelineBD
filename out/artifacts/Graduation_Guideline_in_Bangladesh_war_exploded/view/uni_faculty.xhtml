@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <head>
+        <style type="text/css">
+            a:link, a:visited {
+                background-color: black;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 110%;
+            <!--font-family: "Courier New";-->
+            }
+
+
+            a:hover, a:active {
+                background-color: red;
+            }
+
+            body, textarea{
+
+                font-family: "Segoe UI Light";
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <br></br>
+
+
+    <h:link value="General Information" outcome="index.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Faculty" outcome="uni_faculty.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Department" outcome="uni_dept.xhtml"></h:link>
+
+    <hr></hr>
+
+    <h1 align="center"> University Faculty Insertion </h1>
+    <br></br>
+    <br></br>
+
+
+<h:form>
+
+    <hr></hr>
+    <br></br>
+    Select University:
+    <h:selectOneMenu value="#{universityFacultyController.uniFac.universityList}">
+        <f:selectItems value="#{universityFacultyController.getUniversity()}"></f:selectItems>
+    </h:selectOneMenu>
+    <br></br>
+    <br></br>
+
+
+    Faculty Name:
+    <h:inputText value="#{universityFacultyController.uniFac.faculty}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    Faculty Dean:
+    <h:inputText value="#{universityFacultyController.uniFac.dean}"></h:inputText>
+    <br></br>
+    <br></br>
+
+    <h:commandButton value="Create Facutly" action="#{universityFacultyController.UniversityFaculty}">
+    </h:commandButton>
+
+    <br></br>
+    <br></br>
+
+
+</h:form>
+
+    <hr></hr>
+    </body>
+</f:view>
+</html>

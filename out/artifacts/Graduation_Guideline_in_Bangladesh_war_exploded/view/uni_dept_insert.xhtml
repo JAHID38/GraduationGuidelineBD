@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <head>
+        <style type="text/css">
+            a:link, a:visited {
+                background-color: black;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 110%;
+            <!--font-family: "Courier New";-->
+            }
+
+
+            a:hover, a:active {
+                background-color: red;
+            }
+
+            body{
+
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <br></br>
+
+
+    <h:link value="General Information" outcome="index.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Faculty" outcome="uni_faculty.xhtml"></h:link>
+    &nbsp;
+    <h:link value="Department" outcome="uni_dept.xhtml"></h:link>
+
+    <hr></hr>
+    <h1 align="center"> University Department </h1>
+    <hr></hr>
+
+    University: #{uniDeptController.uniDept.universityList}
+    <br></br>
+    <br></br>
+    University ID: #{uniDeptController.uniDept.uniID}
+    <br></br>
+    <br></br>
+    Faculty: #{uniDeptController.uniDept.facultyList}
+    <br></br>
+    <br></br>
+    Faculty ID: #{uniDeptController.uniDept.facID}
+    <br></br>
+    <br></br>
+    Department Name: #{uniDeptController.uniDept.dept_name}
+    <br></br>
+    <br></br>
+    Head of Department: #{uniDeptController.uniDept.dept_head}
+    <br></br>
+    <br></br>
+    Offered Degree: #{uniDeptController.uniDept.degree}
+    <br></br>
+    <br></br>
+    Course Duration #{uniDeptController.uniDept.duration} years
+    <br></br>
+    <br></br>
+    Semester: #{uniDeptController.uniDept.semester}
+    <br></br>
+    <br></br>
+    Expenditure: #{uniDeptController.uniDept.cost} BDT
+    <br></br>
+    <br></br>
+    Contact: #{uniDeptController.uniDept.contact}
+    <br></br>
+    <br></br>
+    <hr></hr>
+
+    </body>
+</f:view>
+</html>
